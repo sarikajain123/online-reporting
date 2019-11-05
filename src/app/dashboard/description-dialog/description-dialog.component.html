@@ -1,0 +1,12 @@
+<div style="float: right;">
+    <span class="color" (click)='close()'>X</span>
+</div>
+
+<h1 class="color" mat-dialog-title>Description </h1>
+
+<div class="color" mat-dialog-content [innerHtml]='data.description'>
+</div>
+
+<div style="float: right;" mat-dialog-actions>
+    <button class="color btn" mat-button (click)="submit()">Submit</button>
+</div>

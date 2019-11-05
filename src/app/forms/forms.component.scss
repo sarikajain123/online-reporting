@@ -1,0 +1,328 @@
+$marginOrPadding: 30px;
+$blackColor:   #000000;
+
+.top-bar {
+  background: black;
+  height: $marginOrPadding;
+}
+
+.link {
+  color: white;
+  text-decoration: unset;
+}
+
+.logo {
+  float: right;
+  width: 200px;
+}
+
+.logo-div {
+  margin: $marginOrPadding;
+  padding-bottom: $marginOrPadding;
+  // position: relative;
+}
+
+.nav-bar {
+  float: right;
+  padding-right: $marginOrPadding;
+}
+
+.home-icon {
+  padding-right: 10px;
+}
+
+.header-btn-span button {
+  height: 40px;
+  font-weight: bold;
+  size: 14px;
+  align-content: center;
+  border: 1px solid black;
+  width: 150px;
+}
+
+.matter-submit-btn {
+  color: #ffffff;
+  background-color:  $blackColor;
+}
+
+.matter-save-btn {
+  color: #7c7c7b;
+  background-color: white;
+}
+
+.main-div {
+  margin: $marginOrPadding;
+}
+
+.form-div {
+  padding-top: $marginOrPadding;
+}
+
+.title {
+  padding-top: $marginOrPadding;
+  padding-bottom: 80px;
+}
+
+.title span {
+  color:  $blackColor;
+  font-size: $marginOrPadding;
+}
+
+.form-group {
+  padding-bottom: 45px;
+}
+
+.form-group label {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  line-height: 46px;
+}
+.form-group select {
+  width: 100%;
+  height: 46px;
+}
+.form-group-row2,
+.form-group-row5,
+.form-group-row7 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+}
+
+.form-group-row4 {
+  width: 75%;
+}
+.row4 {
+  display: grid;
+  grid-template-columns: auto 100px;
+  grid-gap: 0px;
+  height: 46px;
+}
+.selectR4 {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  size: 16px;
+  align-content: center;
+  border: 1px solid #a8a8a7;
+  color: #ffffff;
+  background-color:  $blackColor;
+}
+.upload-btn {
+  font-weight: bold;
+  size: 14px;
+  align-content: center;
+  border: 1px solid  $blackColor;
+  color: #ffffff;
+  background-color:  $blackColor;
+}
+.view-btn {
+  font-weight: bold;
+  size: 14px;
+  align-content: center;
+  border: 1px solid black;
+  color:  $blackColor;
+  background-color: white;
+}
+.row6 {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $marginOrPadding;
+  height: 40px;
+}
+.text-row6 {
+  padding-top: 10px;
+  color: #a8a8a7;
+  font-size: 12px;
+}
+.form-group-row8,
+.form-group-row9 {
+  width: 50%;
+}
+.form-group-row10 {
+  width: 75%;
+}
+.checkbox-span {
+  display: flex;
+}
+.checkbox-span > input {
+  background-color: white;
+}
+.checkbox-input {
+  width: 5% !important;
+  height: $marginOrPadding;
+}
+.checkbox-name {
+  padding-right: 15px;
+}
+.comment-btn {
+  font-weight: bold;
+  line-height: 40px;
+  size: 14px;
+  align-content: center;
+  border: 1px solid  $blackColor;
+  color: #ffffff;
+  background-color:  $blackColor;
+  float: right;
+  width: 180px;
+}
+.comment-btn-div {
+  padding-top: 15px;
+  padding-bottom: $marginOrPadding;
+}
+.ipsumR10 {
+  height: 150px;
+  overflow: scroll;
+}
+// .ipsumR10[placeholder]{
+//     position: relative;
+//     top:0px;
+//     left: 0px;
+// }
+.form-button {
+  font-weight: bold;
+  line-height: 40px;
+  size: 14px;
+  align-content: center;
+  border: 1px solid  $blackColor;
+  width: 100px;
+  margin-right: 15px;
+  color: #ffffff;
+  background-color:  $blackColor;
+}
+.cancel-btn {
+  color:  $blackColor;
+  background-color: #ffffff;
+}
+.form-buttons-div {
+  margin-bottom: 15px;
+}
+.ipsum-btn {
+  font-weight: bold;
+  line-height: 40px;
+  size: 14px;
+  align-content: center;
+  border: 1px solid  $blackColor;
+  color: #ffffff;
+  background-color:  $blackColor;
+  width: 180px;
+}
+.ipsum-btn-div {
+  padding-top: 15px;
+  padding-bottom: 90px;
+}
+.footer {
+  background-color:  $blackColor;
+  padding-bottom: 2px;
+}
+.footer-div {
+  padding: $marginOrPadding;
+}
+.nav-footer > a {
+  padding: 0px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: unset;
+}
+.nav-footer {
+  padding-bottom: $marginOrPadding;
+}
+.horizontal-line {
+  color: white;
+}
+.margin {
+  margin-top: $marginOrPadding;
+  color: white;
+}
+.footer-logo {
+  float: right;
+  width: 150px;
+}
+label {
+  font-weight: bold;
+  color:  $blackColor;
+  font-size: 14px;
+}
+.datepicker {
+  display: flex;
+}
+.mat-datepicker-icon {
+  position: relative;
+  right: 40px;
+}
+.row2-input1 {
+  border: 1px solid #a8a8a7;
+}
+.row2-input1:active {
+  border-color:  $blackColor;
+}
+
+::placeholder {
+  color: #7c7c7b;
+  opacity: 1;
+  font-size: 16px;
+  padding: 15px;
+}
+::placeholder::selection {
+  border-color:  $blackColor;
+  color:  $blackColor;
+}
+.selectR4:hover {
+  background-color: #575756;
+}
+.mat-datepicker-icon:active {
+  color:  $blackColor !important;
+}
+.datepicker > input {
+  border-color:  $blackColor;
+}
+.ul-div {
+  position: relative;
+  padding-left: 0px;
+}
+.ul-div::selection {
+  border-color:  $blackColor;
+  color:  $blackColor;
+}
+.listItem {
+  padding: 15px 15px 15px 10px;
+  color:  $blackColor;
+}
+.listItem:hover {
+  background-color: #e6e7e8;
+}
+.listItem:active {
+  background-color:  $blackColor;
+  color: #ffffff;
+}
+.deleteIcon {
+  float: right;
+  padding-right: 10px;
+}
+.files-ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.fileList {
+  line-height: 40px;
+  width: 40%;
+}
+.fileList:nth-child(odd) {
+  background-color: #7c7c7b;
+}
+.text-upload {
+  padding: 15px 0px;
+}
+.is-invalid {
+  border: 1px solid #d91e19; /* red */
+}
+:disabled {
+  border: 1px solid #dadada;
+  color: #a8a8a7;
+  background: white;
+}

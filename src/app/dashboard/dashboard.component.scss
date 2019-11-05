@@ -1,0 +1,26 @@
+.heading {
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.create-btn {
+    height: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    size: 16px;
+    align-content: center;
+    padding: 0px 15px;
+    background-color: #000000;
+    // padding-top: 30px;
+}
+
+.create-btn:hover {
+    color: #575756;
+}
+
+.btn-div {
+    padding-bottom: 60px;
+}

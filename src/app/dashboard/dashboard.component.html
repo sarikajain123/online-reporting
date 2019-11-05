@@ -1,0 +1,23 @@
+<header>
+    <div class="heading">
+        Online Reporting – GCMC
+    </div>
+    <div class="btn-div">
+        <button class="create-btn"><span>Create a new matter</span> </button>
+    </div>
+</header>
+
+
+
+<div class="main">
+    <div class="team-active-items">
+        <app-dashboard-content [title]='title1' [filterItems]='filterItems' [tableHeading]='tableHeading' [tableData]='teamTableData'>
+
+        </app-dashboard-content>
+    </div>
+    <div class="APAC-GC-active-items">
+        <app-dashboard-content [title]='title2' [filterItems]='filterItems' [tableHeading]='tableHeading' [tableData]='apacTableData'>
+
+        </app-dashboard-content>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+$marginOrPadding:30px;
+$border:1px solid black;
+
+
+.horizontal-div {
+    border-bottom: $border;
+    width: 60px;
+}
+
+header {
+    padding-top: $marginOrPadding;
+}
+
+.heading {
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: $marginOrPadding;
+}
+
+.tab {
+    border-right:  $border;
+    margin-top: $marginOrPadding;
+    width: 40%;
+    height: 40px;
+    border:  $border;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+
+.tab1,
+.tab2,
+.tab3 {
+    border-right:  $border;
+    // padding: 0px 15px;
+}
+
+#sort-and-filter {
+    height: 100%;
+    width: 100%;
+}
+
+.aside-content {
+    padding-left: 15px;
+    color: #7C7C7B;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#pageNo {
+    width: 45px;
+    height: 25px;
+    margin: 0px 15px;
+}
+
+.pagination {
+    margin-top: $marginOrPadding;
+}
+ .tab2{
+     padding: 10px;
+ }
+ 

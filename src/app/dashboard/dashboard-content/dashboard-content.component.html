@@ -1,0 +1,49 @@
+<div class="body">
+    <div class="horizontal-div"></div>
+    <!-- <hr id="horizontal"> -->
+    <header>
+        <div class="heading">
+            <span>{{title}}</span>
+        </div>
+        <div class="tab">
+            <span class="tab1">
+                    <select  id="sort-and-filter">
+                            <option>Sort & Filter</option>
+                            <option [value]="item" *ngFor='let item of filterItems; index as i'>           
+                                  {{item}}</option>
+                    </select>
+            </span>
+            <span class="tab2" (click)='refresh()'> Reload</span>
+            <span class="tab2">Prepare table for excel export</span>
+        </div>
+        <span class="aside-content">
+                Request completed.Result content:{{4}}
+            </span>
+
+        <div class="pagination">
+            <span>Page {{pageNo}} of {{pageLenght}}.   </span>
+            <span>Go to page</span>
+            <input maxlength="pageLenght" type="number" name="pageNo" id="pageNo" [(ngModel)]='pageNo'>
+            <div *ngIf='pageNo > pageLenght ' style="color: red">Maximum pages are {{pageLenght}} </div>
+        </div>
+    </header>
+    <section class="section">
+        <table class="table">
+            <tr class="table-heading">
+                <th *ngFor='let heading of tableHeading' [style.width]="heading.width">{{heading.id}}</th>
+            </tr>
+
+            <tr class="table-data" *ngFor='let data of chunkArray[pageNo-1];let j=index' (click)='rowClicked(j)'>
+                <td class="table-row" *ngFor=' let temp of data;let i=index;'>
+                    <span *ngIf=' i!==4;else callDescription '>{{temp | truncateString:50}}</span>
+                    <ng-template #callDescription>
+                        <span [innerHtml]='temp | truncateString:45 '></span>
+                        <span *ngIf='rowIndex===j ' class="edit-icon" style='font-size:20px;' mat-raised-button (click)='openDialog(temp)'>&#9998;</span>
+                    </ng-template>
+
+                </td>
+                <td (click)='openForm(data)'><span>Open</span> <span style='font-size:20px; '>&#8594;</span></td>
+            </tr>
+        </table>
+    </section>
+</div>

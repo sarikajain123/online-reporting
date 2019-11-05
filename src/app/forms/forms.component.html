@@ -1,0 +1,248 @@
+<div class="top-bar">
+    <span class="nav-bar">
+        <span class="home-icon">
+            <a routerLink="/dashboard" class="link">
+                <i class="fa fa-home"></i>
+            </a>
+        </span>
+        <span class="home-text">
+            <a routerLink="/dashboard" class="link">Home</a>
+        </span>
+    </span>
+</div>
+<div class="main-div">
+    <div class="logo-div">
+        <img class="logo" src="./../../assets/cs_logo.jpg" alt="logo">
+    </div>
+
+    <div class="form-div">
+        <header>
+            <div class="btn-div">
+                <span class="header-btn-span">
+                    <button type="button" class="matter-submit-btn">Matter Submission</button>
+                    <button class="matter-save-btn">Save changes</button>
+                </span>
+            </div>
+            <div class="title">
+                <span> Matter Submission</span>
+            </div>
+        </header>
+        <section>
+            <div class=''>
+                <form name="form" (Submit)="f.form.valid && onSubmit(f.value)" #f="ngForm" >
+                    <div class="form-group">
+                        <label  for="ipsumR1">Lorem ipsum</label>
+                        <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR1" #ipsumR1="ngModel" [(ngModel)]="model.ipsumR1"   
+                             placeholder="Lorem ipsum"/>
+                            
+
+                    </div>
+                    <div class="form-group  form-group-row2">
+                        <span>
+                            <label  class="row2-label1" for="name">Lorem ipsum*</label>
+                            <input [disabled]='!isOwner' class="row2-input1" type="text" class="form-control" name="name" [(ngModel)]="model.name"
+                                #name="ngModel"  [ngClass]="{ 'is-invalid': name.invalid && name.touched}"
+                                placeholder="Type Name, Surname" required />
+                               
+                                <div *ngIf="!name.valid && (name.invalid || name.touched) && f.submitted" style="color: #d91e19">Name is required</div>
+                        </span>
+
+
+                        <span>
+                            <label for="ipsumR2">Lorem ipsum</label>
+                            <input type="text" class="form-control" name="ipsumR2" placeholder="Lorem ipsum"
+                                [(ngModel)]="model.ipsumR2" #ipsumR2="ngModel"
+                                 />
+                        </span>
+
+                    </div>
+                    <div class="form-group">
+                        <label  for="ipsumR3">Lorem ipsum</label>
+                        <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR3" placeholder="Lorem ipsum"
+                            [(ngModel)]="model.ipsumR3" #ipsumR3="ngModel"
+                             />
+
+                    </div>
+                    <div class="form-group form-group-row4">
+                        <label  class="row2-label1" for="ipsumR4">Lorem ipsum</label>
+                        <div class="row4">
+                            <span>
+                                <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR4" [(ngModel)]="model.ipsumR4"
+                                    #ipsumR4="ngModel" [ngClass]="{ 'is-invalid': ipsumR4.invalid && ipsumR4.touched}"
+                                    [value]="selectFile.value"
+                                     />
+                            </span>
+                            <span>
+                              <input [disabled]='!isOwner' style="display: none" type="file" id="fileLoader" name="files" #selectFile/>
+                                <button class='selectR4' (click)='selectFile.click()'>Select</button>
+                            </span>
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-group form-group-row5">
+                        <span class="">
+                            <label for="ipsumR5">Lorem ipsum</label>
+                            <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR5" [(ngModel)]="model.ipsumR5"
+                                #ipsumR5="ngModel"
+                                    placeholder="Type Name, Surname" />
+                        </span>
+                        <span>
+                            <label  for="ipsumR5C2">Lorem ipsum</label>
+                            <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR5C2" [(ngModel)]="model.ipsumR5C2"
+                                #ipsumR5C2="ngModel"
+                                    />
+                        </span>
+
+                    </div>
+                    <div class="form-group">
+                        <label  for="attachments">Attachments</label>
+                        <span class="row6">
+                            <button type="button" class="view-btn">View files</button>
+                            <button type="button" class="upload-btn">Upload attachments</button>
+                        </span>
+                        <div class="text-upload">
+                            <span class="text-row6">Please drag and drop ﬁles to the folder and press
+                                Upload
+                                attachment to attach the ﬁles</span>
+                        </div>
+                        <div *ngIf='files'>
+                            Files:
+                            <div>
+                                <ul class="files-ul" style="list-style-type:none;" >
+                                    <li class="fileList" *ngFor="let file of files; let i = index" >
+                                        {{file}} <span class="deleteIcon">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-row7">
+                        <span>
+                            <label  for="ipsumR7">Lorem ipsum</label>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <span  *ngIf='dropItemR7'>
+                                        {{dropItemR7}}
+                                    </span>
+                                </mat-expansion-panel-header>
+                                <ul class="form-control ul-div" name="ipsumR7" style="list-style-type:none;">
+
+                                    <li class="listItem" *ngFor="let item of dropDownOption; let i = index"
+                                        (click)='dropItemR7=item'>
+                                        {{item}}
+                                    </li>
+                                </ul>
+
+                            </mat-expansion-panel>
+                        </span>
+                        <span>
+                            <label for="ipsumR7">Lorem ipsum</label>
+                            <mat-expansion-panel >
+                                <mat-expansion-panel-header>
+                                    <span *ngFor="let item of checkboxDropdownItems;">
+                                        {{item}}
+                                    </span>
+                                </mat-expansion-panel-header>
+
+                                <div *ngFor="let item of dropDownOption; let i = index">
+                                    <input [disabled]='!isOwner' [checked]="checkbox" (click)="selectedItem(item,$event)"
+                                        class="checkbox-input" type="checkbox" value="item">  
+                                    <span class="checkbox-name">
+                                        Lorem ipsum
+                                    </span>
+                                </div>
+                            </mat-expansion-panel>
+                        </span>
+
+
+                    </div>
+                    <div class="form-group form-group-row8">
+                        <label  for="ipsumR8">Lorem ipsum</label>
+
+                        <span class="datepicker">
+                            <input [disabled]='!isOwner' matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle class="mat-datepicker-icon" matSuffix [for]="picker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </span>
+
+
+
+                    </div>
+                    <div  class="form-group form-group-row9">
+                        <label  for="ipsumR9">Lorem ipsum</label>
+                        
+                        <span class="checkbox-span">
+                          
+                            <input [disabled]='!isOwner' class="checkbox-input" type="checkbox" value="item1"><span class="checkbox-name">
+                                Lorem ipsum
+                            </span>
+                            <input [disabled]='!isOwner' class="checkbox-input" type="checkbox" value="item2"><span class="checkbox-name">
+                                Lorem ipsum
+                            </span>
+                            <input [disabled]='!isOwner' class="checkbox-input" type="checkbox" value="item3"><span class="checkbox-name">
+                                Lorem ipsum
+                            </span>
+                            <input [disabled]='!isOwner' class="checkbox-input" type="checkbox" value="item4"><span class="checkbox-name">
+                                Lorem ipsum
+                            </span>
+                        </span>
+
+                    </div>
+                    <div class="form-group form-group-row10">
+                        <label  for="ipsumR10">Lorem ipsum</label>
+                        <input [disabled]='!isOwner' type="text" class="form-control ipsumR10" name="ipsumR10" [(ngModel)]="model.ipsumR10"
+                            #ipsumR10="ngModel"
+                             placeholder="Type your comment..." />
+                        <div class="comment-btn-div">
+                            <button class="comment-btn" type="button">Submit Comment</button>
+                        </div>
+
+                    </div>
+                    <div class="form-group form-buttons-div">
+                        <button class="form-button cancel-btn" (click)='cancel()'>cancel</button>
+                        <button class="form-button" (click)='save(f.value)'>save</button>
+                        <button [disabled]='!isOwner' class="form-button" type="submit" >submit</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="ipsumR12">Lorem ipsum</label>
+                        <input [disabled]='!isOwner' type="text" class="form-control" name="ipsumR11" [(ngModel)]="model.ipsumR11"
+                            #ipsumR11text="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ipsumR11.invalid }"
+                                placeholder="Lorem ipsum" />
+                        <div class="ipsum-btn-div">
+                            <button class="ipsum-btn" type="button">Lorem ipsum</button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+        </section>
+        <footer class="footer">
+            <div class="footer-div">
+                <div class="nav-footer">
+                    <a href="#"> Lorem</a>
+                    <a href="#">Lorem</a>
+                    <a href="#">Lorem ipsum</a>
+                </div>
+                <hr class="horizontal-line">
+                <div class="margin">
+                    <span>Lorem ipsum</span>
+                </div>
+                <div class="margin">
+                    <span>Copyright @ Lorem ipsum</span>
+                    <span>
+                        <img class="logo footer-logo" src="../../assets/cs_logo_white.png" alt="">
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
